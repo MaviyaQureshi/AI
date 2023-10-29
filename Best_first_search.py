@@ -4,6 +4,7 @@ v = int(input("Enter the total number of vertices: "))
 
 graph = [[] for i in range(v)]
 
+
 def best_first_search(actual_Src, target, n):
     visited = [False] * n
     pq = PriorityQueue()
@@ -22,9 +23,11 @@ def best_first_search(actual_Src, target, n):
                 pq.put((c, v))
     print()
 
+
 def add_edge(x, y, cost):
     graph[x].append((y, cost))
     graph[y].append((x, cost))
+
 
 num_edges = int(input("Enter the number of edges: "))
 
